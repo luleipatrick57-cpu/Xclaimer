@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="clock-style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>🌍 World Clock</h1>
+        <p class="subtitle">Time zones around the globe</p>
+    </div>
+
+    <div class="local-time-section">
+        <div class="local-clock">
+            <div class="clock-display">
+                <div class="clock-inner">
+                    <div class="hand hour-hand"></div>
+                    <div class="hand minute-hand"></div>
+                    <div class="hand second-hand"></div>
+                    <div class="clock-center"></div>
+                </div>
+            </div>
+            <div class="time-info">
+                <h2 id="localCity">Your Location</h2>
+                <p class="digital-time" id="localDigitalTime">--:--:--</p>
+                <p class="timezone-label" id="localTimezone">UTC+0</p>
+                <p class="date-display" id="localDate">Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="timezone-controls">
+        <h3>Add Time Zone</h3>
+        <div class="control-group">
+            <select id="timezoneSelect" class="timezone-input">
+                <option value="">Select a time zone...</option>
+            </select>
+            <button id="addTimezoneBtn" class="add-timezone-btn">Add</button>
+        </div>
+    </div>
+
+    <div class="timezones-section">
+        <h2>Time Zones</h2>
+        <div id="timezonesGrid" class="timezones-grid"></div>
+        <div class="empty-state" id="emptyState">
+            <p>📌 Add time zones to see times around the world</p>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="clearAllBtn" class="clear-all-btn">Clear All</button>
+        <button id="use24HourBtn" class="toggle-btn">Toggle 24-Hour Format</button>
+    </div>
+</div>
+
+<script src="clock-app.js"></script>
+</body>
+</html>
